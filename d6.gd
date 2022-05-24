@@ -18,7 +18,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if get_angular_velocity()==Vector3(0,0,0):
-		var face1 = $"Face1"
-		$"Viewport/Label".set_text(str(face1.global_transform.origin.z))
+		var face1 = $"face1"
 		face1.set_visible(true)
 		set_process(false)

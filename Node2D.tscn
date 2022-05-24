@@ -5,15 +5,28 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="btn_add_d6" type="Button" parent="."]
+margin_top = 128.0
+margin_right = 141.0
+margin_bottom = 189.0
+text = "Add d6"
+
+[node name="btn_add_d4" type="Button" parent="."]
 margin_right = 141.0
 margin_bottom = 61.0
-text = "Add d6"
+text = "Add d4"
 
 [node name="btn_remove_d6" type="Button" parent="."]
 margin_left = 880.0
+margin_top = 128.0
+margin_right = 1021.0
+margin_bottom = 189.0
+text = "Remove d6"
+
+[node name="btn_remove_d4" type="Button" parent="."]
+margin_left = 880.0
 margin_right = 1021.0
 margin_bottom = 61.0
-text = "Remove d6"
+text = "Remove d4"
 
 [node name="btn_roll" type="Button" parent="."]
 margin_left = 432.0
@@ -30,12 +43,16 @@ margin_left = 472.0
 margin_top = 72.0
 margin_right = 539.0
 margin_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Some Text"
 align = 1
 valign = 1
 
 [connection signal="pressed" from="btn_add_d6" to="main" method="_on_btn_add_d6_pressed"]
+[connection signal="pressed" from="btn_add_d4" to="main" method="_on_btn_add_d4_pressed"]
 [connection signal="pressed" from="btn_remove_d6" to="main" method="_on_btn_remove_d6_pressed"]
+[connection signal="pressed" from="btn_remove_d4" to="main" method="_on_btn_remove_d4_pressed"]
 [connection signal="pressed" from="btn_roll" to="main" method="_on_btn_roll_pressed"]
 
 [editable path="main"]

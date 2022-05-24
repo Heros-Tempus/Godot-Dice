@@ -16,6 +16,7 @@ func _ready():
 #	pass
 
 
+var d4_scene = load("res://d4.tscn")
 var d6_scene = load("res://d6.tscn")
 
 var d_list = []
@@ -37,7 +38,7 @@ func _on_btn_remove_d6_pressed():
 
 func _on_btn_roll_pressed():
 	for n in $".".get_children():
-		if n.get_filename() == "res://d6.tscn":
+		if n.get_filename() == "res://d6.tscn" or n.get_filename() == "res://d4.tscn" :
 			n.queue_free()
 		
 		
@@ -45,3 +46,17 @@ func _on_btn_roll_pressed():
 		var x = d.instance()
 		x.transform.origin = Vector3(0,10,0)
 		add_child(x)
+
+
+func _on_btn_add_d4_pressed():
+	d_list.append(d4_scene)
+	d_count["d4"] += 1
+	$"../Label".text = str(d_count)
+
+
+func _on_btn_remove_d4_pressed():
+	var i = d_list.find(d4_scene)
+	if i != -1:
+		d_count["d4"] -= 1
+		d_list.remove(i)
+		$"../Label".text = str(d_count)

@@ -1,8 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://d6.gd" type="Script" id=1]
 [ext_resource path="res://face.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/1.png" type="Texture" id=3]
+[ext_resource path="res://images/2.png" type="Texture" id=4]
+[ext_resource path="res://images/3.png" type="Texture" id=5]
+[ext_resource path="res://images/4.png" type="Texture" id=6]
+[ext_resource path="res://images/6.png" type="Texture" id=7]
+[ext_resource path="res://images/5.png" type="Texture" id=8]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -62,8 +67,37 @@ shape = SubResource( 2 )
 
 [node name="face1" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.25, 0 )
-
-[node name="Sprite3D" parent="face1" index="0"]
+opacity = 0.0
 texture = ExtResource( 3 )
 
+[node name="face2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.25, 0, 0 )
+opacity = 0.0
+texture = ExtResource( 4 )
+
+[node name="face3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 1.25 )
+opacity = 0.0
+texture = ExtResource( 5 )
+
+[node name="face4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -1.25 )
+opacity = 0.0
+texture = ExtResource( 6 )
+
+[node name="face5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.25, 0, 0 )
+opacity = 0.0
+texture = ExtResource( 8 )
+
+[node name="face6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.25, 0 )
+opacity = 0.0
+texture = ExtResource( 7 )
+
 [editable path="face1"]
+[editable path="face2"]
+[editable path="face3"]
+[editable path="face4"]
+[editable path="face5"]
+[editable path="face6"]

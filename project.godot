@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Dice"
-run/main_scene="res://main.tscn"
+run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
 [gdnative]

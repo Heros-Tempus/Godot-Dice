@@ -23,25 +23,25 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="face1" type="Sprite3D" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.75, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 5 )
 
 [node name="face2" type="Sprite3D" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.954, -2.085, -1.638 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.954, -2.085, -1.638 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 3 )
 
 [node name="face3" type="Sprite3D" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.79864, -2.08455, -1.5978 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79864, -2.08455, -1.5978 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 4 )
 
 [node name="face4" type="Sprite3D" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -2.085, 1.646 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.085, 1.646 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 6 )

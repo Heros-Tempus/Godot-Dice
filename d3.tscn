@@ -13,26 +13,28 @@ points = PoolVector3Array( 10.5816, 3.27859, 0.219337, -9.96307, -4.3301, -4.981
 script = ExtResource( 4 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
 mesh = ExtResource( 5 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="face1" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.751, 0 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 4.751, 0 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 2 )
 
 [node name="face2" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.74841, -5.43727 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -4.74841, -5.43727 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 3 )
 
 [node name="face3" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.748, 5.437 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -4.748, 5.437 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 1 )

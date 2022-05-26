@@ -307,6 +307,18 @@ size_flags_vertical = 3
 
 [node name="main" parent="." instance=ExtResource( 1 )]
 
+[connection signal="pressed" from="VBoxAdd/btn_add_d3" to="main" method="_on_btn_add_d3_pressed"]
 [connection signal="pressed" from="VBoxAdd/btn_add_d4" to="main" method="_on_btn_add_d4_pressed"]
 [connection signal="pressed" from="VBoxAdd/btn_add_d6" to="main" method="_on_btn_add_d6_pressed"]
+[connection signal="pressed" from="VBoxAdd/btn_add_d8" to="main" method="_on_btn_add_d8_pressed"]
+[connection signal="pressed" from="VBoxAdd/btn_add_d10" to="main" method="_on_btn_add_d10_pressed"]
+[connection signal="pressed" from="VBoxAdd/btn_add_d12" to="main" method="_on_btn_add_d12_pressed"]
+[connection signal="pressed" from="VBoxAdd/btn_add_d20" to="main" method="_on_btn_add_d20_pressed"]
 [connection signal="pressed" from="VBoxRoll/btn_roll" to="main" method="_on_btn_roll_pressed"]
+[connection signal="pressed" from="VBoxRemove/btn_remove_d3" to="main" method="_on_btn_remove_d3_pressed"]
+[connection signal="pressed" from="VBoxRemove/btn_remove_d4" to="main" method="_on_btn_remove_d4_pressed"]
+[connection signal="pressed" from="VBoxRemove/btn_remove_d6" to="main" method="_on_btn_remove_d6_pressed"]
+[connection signal="pressed" from="VBoxRemove/btn_remove_d8" to="main" method="_on_btn_remove_d8_pressed"]
+[connection signal="pressed" from="VBoxRemove/btn_remove_d10" to="main" method="_on_btn_remove_d10_pressed"]
+[connection signal="pressed" from="VBoxRemove/btn_remove_d12" to="main" method="_on_btn_remove_d12_pressed"]
+[connection signal="pressed" from="VBoxRemove/btn_remove_d20" to="main" method="_on_btn_remove_d20_pressed"]

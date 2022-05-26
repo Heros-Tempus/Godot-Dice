@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://images/1.png" type="Texture" id=1]
+[ext_resource path="res://images/3.png" type="Texture" id=2]
+[ext_resource path="res://images/4.png" type="Texture" id=3]
+[ext_resource path="res://images/2.png" type="Texture" id=4]
+[ext_resource path="res://images/8.png" type="Texture" id=5]
+[ext_resource path="res://images/5.png" type="Texture" id=6]
+[ext_resource path="res://images/7.png" type="Texture" id=7]
+[ext_resource path="res://images/6.png" type="Texture" id=8]
+[ext_resource path="res://d8.gd" type="Script" id=9]
+[ext_resource path="res://models/D8.obj" type="ArrayMesh" id=10]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( 9.707, -7.9258, 5.60216, 9.707, -2.64245, 1.86738, 0, 7.92425, 11.2087, -9.707, -7.9258, 5.60216, 0, -7.9258, -11.2087, 9.707, 2.6409, -1.86958, 9.707, 7.9258, -5.60435, -9.707, 0, 0, -9.707, 7.9258, -5.60435, -4.8535, -7.9258, -2.80437, 3.2344, -2.64245, -9.34132, 6.4707, 2.6409, -7.47393 )
+
+[node name="d8" type="RigidBody"]
+script = ExtResource( 9 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="face8" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -2.07078, 0 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 5 )
+
+[node name="face7" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.56282, -0.759764, -0.944231 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 7 )
+
+[node name="face6" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.41, -0.874187, -0.982054 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 8 )
+
+[node name="face5" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0550101, -0.937521, 1.66121 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 6 )
+
+[node name="face4" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.82898, 0, 0.873453 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 3 )
+
+[node name="face3" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -1.98964 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 2 )
+
+[node name="face2" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.70025, 0.376775, 1.06244 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 4 )
+
+[node name="face1" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.876, 0 )
+opacity = 0.0
+billboard = 1
+texture = ExtResource( 1 )

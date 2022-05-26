@@ -1,10 +1,7 @@
 extends RigidBody
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var count = 30
+var opacity = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,8 +12,6 @@ func _ready():
 	var z = rand_range(-1 * spin_magnitude, spin_magnitude)
 	set_angular_velocity(Vector3(x, y, z))
 
-var count = 30
-var opacity = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if get_angular_velocity()==Vector3(0,0,0):

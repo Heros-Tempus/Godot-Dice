@@ -15,7 +15,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+onready var lbl = $"../VBoxRoll/Label"
 var d4_scene = load("res://d4.tscn")
 var d6_scene = load("res://d6.tscn")
 
@@ -25,7 +25,7 @@ var d_count = {"d3":0, "d4":0, "d6":0}
 func _on_btn_add_d6_pressed():
 	d_list.append(d6_scene)
 	d_count["d6"] += 1
-	$"../Label".text = str(d_count)
+	lbl.text = str(d_count)
 
 
 func _on_btn_remove_d6_pressed():
@@ -33,7 +33,7 @@ func _on_btn_remove_d6_pressed():
 	if i != -1:
 		d_count["d6"] -= 1
 		d_list.remove(i)
-		$"../Label".text = str(d_count)
+		lbl.text = str(d_count)
 
 
 func _on_btn_roll_pressed():
@@ -51,7 +51,7 @@ func _on_btn_roll_pressed():
 func _on_btn_add_d4_pressed():
 	d_list.append(d4_scene)
 	d_count["d4"] += 1
-	$"../Label".text = str(d_count)
+	lbl.text = str(d_count)
 
 
 func _on_btn_remove_d4_pressed():
@@ -59,4 +59,4 @@ func _on_btn_remove_d4_pressed():
 	if i != -1:
 		d_count["d4"] -= 1
 		d_list.remove(i)
-		$"../Label".text = str(d_count)
+		lbl.text = str(d_count)

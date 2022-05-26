@@ -11,6 +11,7 @@
 points = PoolVector3Array( -9.5465, -7.7947, -8.2675, 0, 7.7947, -2.75637, 9.5465, -7.7947, -8.2675, 0, -7.7947, 8.2675 )
 
 [node name="d4" type="RigidBody"]
+gravity_scale = 2.0
 script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]

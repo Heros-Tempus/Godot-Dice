@@ -6,11 +6,12 @@ var d4_scene = load("res://d4.tscn")
 var d6_scene = load("res://d6.tscn")
 var d8_scene = load("res://d8.tscn")
 var d10_scene = load("res://d10.tscn")
+var d12_scene = load("res://d12.tscn")
 
 var d_list = []
 var d_count = {"d3":0, "d4":0, "d6":0, "d8":0, "d10":0, "d12":0, "d20":0}
 
-var file_list = ["res://d3.tscn", "res://d4.tscn", "res://d6.tscn", "res://d8.tscn", "res://d10.tscn"]
+var file_list = ["res://d3.tscn", "res://d4.tscn", "res://d6.tscn", "res://d8.tscn", "res://d10.tscn", "res://d12.tscn"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -88,11 +89,11 @@ func _on_btn_remove_d10_pressed():
 
 
 func _on_btn_add_d12_pressed():
-	pass # Replace with function body.
+	add_dn("d12", d12_scene)
 
 
 func _on_btn_remove_d12_pressed():
-	pass # Replace with function body.
+	remove_dn("d12", d12_scene)
 
 
 func _on_btn_add_d20_pressed():

@@ -1,6 +1,6 @@
 extends Spatial
 
-onready var lbl = $"../VBoxRoll/Label"
+onready var lbl = $"../../Label"
 var d3_scene = load("res://d3.tscn")
 var d4_scene = load("res://d4.tscn")
 var d6_scene = load("res://d6.tscn")
@@ -16,7 +16,7 @@ var file_list = ["res://d3.tscn", "res://d4.tscn", "res://d6.tscn", "res://d8.ts
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

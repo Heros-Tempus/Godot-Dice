@@ -1,324 +1,373 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://main.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/gift/gift_node.gd" type="Script" id=2]
 
-[node name="Control" type="HBoxContainer"]
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Roboto/Roboto-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 0, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Roboto/Roboto-Black.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 36
+font_data = SubResource( 7 )
+
+[sub_resource type="Theme" id=9]
+Button/colors/font_color = Color( 0, 0.694118, 0.25098, 1 )
+Button/colors/font_color_focus = Color( 0, 0.694118, 0.25098, 1 )
+Button/colors/font_color_hover = Color( 0, 0.694118, 0.25098, 1 )
+Button/colors/font_color_pressed = Color( 0, 0.694118, 0.25098, 1 )
+Button/fonts/font = SubResource( 2 )
+Button/styles/focus = SubResource( 3 )
+Button/styles/hover = SubResource( 4 )
+Button/styles/normal = SubResource( 5 )
+Button/styles/pressed = SubResource( 6 )
+Label/colors/font_color = Color( 1, 0, 1, 1 )
+Label/fonts/font = SubResource( 8 )
+
+[node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = SubResource( 9 )
 
-[node name="VBoxAdd" type="VBoxContainer" parent="."]
+[node name="Label" type="Label" parent="."]
+margin_top = 552.0
+margin_right = 1024.0
+margin_bottom = 597.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+align = 1
+valign = 1
+
+[node name="Control" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 2 )
+
+[node name="VBoxAdd" type="VBoxContainer" parent="Control"]
 margin_right = 201.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="btn_add_d3" type="Button" parent="VBoxAdd"]
+[node name="btn_add_d3" type="Button" parent="Control/VBoxAdd"]
 margin_right = 201.0
 margin_bottom = 39.0
 size_flags_vertical = 3
 text = "Add D3"
 
-[node name="Control" type="Control" parent="VBoxAdd"]
+[node name="Control" type="Control" parent="Control/VBoxAdd"]
 margin_top = 43.0
 margin_right = 201.0
 margin_bottom = 82.0
 size_flags_vertical = 3
 
-[node name="btn_add_d4" type="Button" parent="VBoxAdd"]
+[node name="btn_add_d4" type="Button" parent="Control/VBoxAdd"]
 margin_top = 86.0
 margin_right = 201.0
 margin_bottom = 125.0
 size_flags_vertical = 3
 text = "Add D4"
 
-[node name="Control2" type="Control" parent="VBoxAdd"]
+[node name="Control2" type="Control" parent="Control/VBoxAdd"]
 margin_top = 129.0
 margin_right = 201.0
 margin_bottom = 168.0
 size_flags_vertical = 3
 
-[node name="btn_add_d6" type="Button" parent="VBoxAdd"]
+[node name="btn_add_d6" type="Button" parent="Control/VBoxAdd"]
 margin_top = 172.0
 margin_right = 201.0
 margin_bottom = 211.0
 size_flags_vertical = 3
 text = "Add D6"
 
-[node name="Control3" type="Control" parent="VBoxAdd"]
+[node name="Control3" type="Control" parent="Control/VBoxAdd"]
 margin_top = 215.0
 margin_right = 201.0
 margin_bottom = 254.0
 size_flags_vertical = 3
 
-[node name="btn_add_d8" type="Button" parent="VBoxAdd"]
+[node name="btn_add_d8" type="Button" parent="Control/VBoxAdd"]
 margin_top = 258.0
 margin_right = 201.0
 margin_bottom = 297.0
 size_flags_vertical = 3
 text = "Add D8"
 
-[node name="Control4" type="Control" parent="VBoxAdd"]
+[node name="Control4" type="Control" parent="Control/VBoxAdd"]
 margin_top = 301.0
 margin_right = 201.0
 margin_bottom = 341.0
 size_flags_vertical = 3
 
-[node name="btn_add_d10" type="Button" parent="VBoxAdd"]
+[node name="btn_add_d10" type="Button" parent="Control/VBoxAdd"]
 margin_top = 345.0
 margin_right = 201.0
 margin_bottom = 384.0
 size_flags_vertical = 3
 text = "Add D10"
 
-[node name="Control5" type="Control" parent="VBoxAdd"]
+[node name="Control5" type="Control" parent="Control/VBoxAdd"]
 margin_top = 388.0
 margin_right = 201.0
 margin_bottom = 427.0
 size_flags_vertical = 3
 
-[node name="btn_add_d12" type="Button" parent="VBoxAdd"]
+[node name="btn_add_d12" type="Button" parent="Control/VBoxAdd"]
 margin_top = 431.0
 margin_right = 201.0
 margin_bottom = 470.0
 size_flags_vertical = 3
 text = "Add D12"
 
-[node name="Control6" type="Control" parent="VBoxAdd"]
+[node name="Control6" type="Control" parent="Control/VBoxAdd"]
 margin_top = 474.0
 margin_right = 201.0
 margin_bottom = 513.0
 size_flags_vertical = 3
 
-[node name="btn_add_d20" type="Button" parent="VBoxAdd"]
+[node name="btn_add_d20" type="Button" parent="Control/VBoxAdd"]
 margin_top = 517.0
 margin_right = 201.0
 margin_bottom = 556.0
 size_flags_vertical = 3
 text = "Add D20"
 
-[node name="Control7" type="Control" parent="VBoxAdd"]
+[node name="Control7" type="Control" parent="Control/VBoxAdd"]
 margin_top = 560.0
 margin_right = 201.0
 margin_bottom = 600.0
 size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="."]
+[node name="Control15" type="Control" parent="Control"]
 margin_left = 205.0
 margin_right = 407.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="VBoxRoll" type="VBoxContainer" parent="."]
+[node name="VBoxRoll" type="VBoxContainer" parent="Control"]
 margin_left = 411.0
 margin_right = 612.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="btn_roll" type="Button" parent="VBoxRoll"]
+[node name="btn_roll" type="Button" parent="Control/VBoxRoll"]
 margin_right = 201.0
-margin_bottom = 39.0
+margin_bottom = 42.0
 size_flags_vertical = 3
 text = "Roll"
 
-[node name="Label" type="Label" parent="VBoxRoll"]
-margin_top = 43.0
+[node name="Control3" type="Control" parent="Control/VBoxRoll"]
+margin_top = 46.0
 margin_right = 201.0
-margin_bottom = 82.0
-size_flags_vertical = 3
-text = "Some Text"
-align = 1
-valign = 1
-
-[node name="Control3" type="Control" parent="VBoxRoll"]
-margin_top = 86.0
-margin_right = 201.0
-margin_bottom = 125.0
+margin_bottom = 88.0
 size_flags_vertical = 3
 
-[node name="Control4" type="Control" parent="VBoxRoll"]
-margin_top = 129.0
+[node name="Control4" type="Control" parent="Control/VBoxRoll"]
+margin_top = 92.0
 margin_right = 201.0
-margin_bottom = 168.0
+margin_bottom = 135.0
 size_flags_vertical = 3
 
-[node name="Control5" type="Control" parent="VBoxRoll"]
-margin_top = 172.0
+[node name="Control5" type="Control" parent="Control/VBoxRoll"]
+margin_top = 139.0
 margin_right = 201.0
-margin_bottom = 211.0
+margin_bottom = 181.0
 size_flags_vertical = 3
 
-[node name="Control6" type="Control" parent="VBoxRoll"]
-margin_top = 215.0
+[node name="Control6" type="Control" parent="Control/VBoxRoll"]
+margin_top = 185.0
 margin_right = 201.0
-margin_bottom = 254.0
+margin_bottom = 228.0
 size_flags_vertical = 3
 
-[node name="Control7" type="Control" parent="VBoxRoll"]
-margin_top = 258.0
+[node name="Control7" type="Control" parent="Control/VBoxRoll"]
+margin_top = 232.0
 margin_right = 201.0
-margin_bottom = 297.0
+margin_bottom = 274.0
 size_flags_vertical = 3
 
-[node name="Control8" type="Control" parent="VBoxRoll"]
-margin_top = 301.0
+[node name="Control8" type="Control" parent="Control/VBoxRoll"]
+margin_top = 278.0
 margin_right = 201.0
-margin_bottom = 341.0
+margin_bottom = 321.0
 size_flags_vertical = 3
 
-[node name="Control9" type="Control" parent="VBoxRoll"]
-margin_top = 345.0
+[node name="Control9" type="Control" parent="Control/VBoxRoll"]
+margin_top = 325.0
 margin_right = 201.0
-margin_bottom = 384.0
+margin_bottom = 367.0
 size_flags_vertical = 3
 
-[node name="Control10" type="Control" parent="VBoxRoll"]
-margin_top = 388.0
+[node name="Control10" type="Control" parent="Control/VBoxRoll"]
+margin_top = 371.0
 margin_right = 201.0
-margin_bottom = 427.0
+margin_bottom = 414.0
 size_flags_vertical = 3
 
-[node name="Control11" type="Control" parent="VBoxRoll"]
-margin_top = 431.0
+[node name="Control11" type="Control" parent="Control/VBoxRoll"]
+margin_top = 418.0
 margin_right = 201.0
-margin_bottom = 470.0
+margin_bottom = 460.0
 size_flags_vertical = 3
 
-[node name="Control12" type="Control" parent="VBoxRoll"]
-margin_top = 474.0
+[node name="Control12" type="Control" parent="Control/VBoxRoll"]
+margin_top = 464.0
 margin_right = 201.0
-margin_bottom = 513.0
+margin_bottom = 507.0
 size_flags_vertical = 3
 
-[node name="Control13" type="Control" parent="VBoxRoll"]
-margin_top = 517.0
+[node name="Control13" type="Control" parent="Control/VBoxRoll"]
+margin_top = 511.0
 margin_right = 201.0
-margin_bottom = 556.0
+margin_bottom = 553.0
 size_flags_vertical = 3
 
-[node name="Control14" type="Control" parent="VBoxRoll"]
-margin_top = 560.0
+[node name="Control14" type="Control" parent="Control/VBoxRoll"]
+margin_top = 557.0
 margin_right = 201.0
 margin_bottom = 600.0
 size_flags_vertical = 3
 
-[node name="Control2" type="Control" parent="."]
+[node name="Control2" type="Control" parent="Control"]
 margin_left = 616.0
 margin_right = 818.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 
-[node name="VBoxRemove" type="VBoxContainer" parent="."]
+[node name="VBoxRemove" type="VBoxContainer" parent="Control"]
 margin_left = 822.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="btn_remove_d3" type="Button" parent="VBoxRemove"]
+[node name="btn_remove_d3" type="Button" parent="Control/VBoxRemove"]
 margin_right = 202.0
 margin_bottom = 39.0
 size_flags_vertical = 3
 text = "Remove D3"
 
-[node name="Control" type="Control" parent="VBoxRemove"]
+[node name="Control" type="Control" parent="Control/VBoxRemove"]
 margin_top = 43.0
 margin_right = 202.0
 margin_bottom = 82.0
 size_flags_vertical = 3
 
-[node name="btn_remove_d4" type="Button" parent="VBoxRemove"]
+[node name="btn_remove_d4" type="Button" parent="Control/VBoxRemove"]
 margin_top = 86.0
 margin_right = 202.0
 margin_bottom = 125.0
 size_flags_vertical = 3
 text = "Remove D4"
 
-[node name="Control2" type="Control" parent="VBoxRemove"]
+[node name="Control2" type="Control" parent="Control/VBoxRemove"]
 margin_top = 129.0
 margin_right = 202.0
 margin_bottom = 168.0
 size_flags_vertical = 3
 
-[node name="btn_remove_d6" type="Button" parent="VBoxRemove"]
+[node name="btn_remove_d6" type="Button" parent="Control/VBoxRemove"]
 margin_top = 172.0
 margin_right = 202.0
 margin_bottom = 211.0
 size_flags_vertical = 3
 text = "Remove D6"
 
-[node name="Control3" type="Control" parent="VBoxRemove"]
+[node name="Control3" type="Control" parent="Control/VBoxRemove"]
 margin_top = 215.0
 margin_right = 202.0
 margin_bottom = 254.0
 size_flags_vertical = 3
 
-[node name="btn_remove_d8" type="Button" parent="VBoxRemove"]
+[node name="btn_remove_d8" type="Button" parent="Control/VBoxRemove"]
 margin_top = 258.0
 margin_right = 202.0
 margin_bottom = 297.0
 size_flags_vertical = 3
 text = "Remove D8"
 
-[node name="Control4" type="Control" parent="VBoxRemove"]
+[node name="Control4" type="Control" parent="Control/VBoxRemove"]
 margin_top = 301.0
 margin_right = 202.0
 margin_bottom = 341.0
 size_flags_vertical = 3
 
-[node name="btn_remove_d10" type="Button" parent="VBoxRemove"]
+[node name="btn_remove_d10" type="Button" parent="Control/VBoxRemove"]
 margin_top = 345.0
 margin_right = 202.0
 margin_bottom = 384.0
 size_flags_vertical = 3
 text = "Remove D10"
 
-[node name="Control5" type="Control" parent="VBoxRemove"]
+[node name="Control5" type="Control" parent="Control/VBoxRemove"]
 margin_top = 388.0
 margin_right = 202.0
 margin_bottom = 427.0
 size_flags_vertical = 3
 
-[node name="btn_remove_d12" type="Button" parent="VBoxRemove"]
+[node name="btn_remove_d12" type="Button" parent="Control/VBoxRemove"]
 margin_top = 431.0
 margin_right = 202.0
 margin_bottom = 470.0
 size_flags_vertical = 3
 text = "Remove D12"
 
-[node name="Control6" type="Control" parent="VBoxRemove"]
+[node name="Control6" type="Control" parent="Control/VBoxRemove"]
 margin_top = 474.0
 margin_right = 202.0
 margin_bottom = 513.0
 size_flags_vertical = 3
 
-[node name="btn_remove_d20" type="Button" parent="VBoxRemove"]
+[node name="btn_remove_d20" type="Button" parent="Control/VBoxRemove"]
 margin_top = 517.0
 margin_right = 202.0
 margin_bottom = 556.0
 size_flags_vertical = 3
 text = "Remove D20"
 
-[node name="Control7" type="Control" parent="VBoxRemove"]
+[node name="Control7" type="Control" parent="Control/VBoxRemove"]
 margin_top = 560.0
 margin_right = 202.0
 margin_bottom = 600.0
 size_flags_vertical = 3
 
-[node name="main" parent="." instance=ExtResource( 1 )]
+[node name="main" parent="Control" instance=ExtResource( 1 )]
 
-[connection signal="pressed" from="VBoxAdd/btn_add_d3" to="main" method="_on_btn_add_d3_pressed"]
-[connection signal="pressed" from="VBoxAdd/btn_add_d4" to="main" method="_on_btn_add_d4_pressed"]
-[connection signal="pressed" from="VBoxAdd/btn_add_d6" to="main" method="_on_btn_add_d6_pressed"]
-[connection signal="pressed" from="VBoxAdd/btn_add_d8" to="main" method="_on_btn_add_d8_pressed"]
-[connection signal="pressed" from="VBoxAdd/btn_add_d10" to="main" method="_on_btn_add_d10_pressed"]
-[connection signal="pressed" from="VBoxAdd/btn_add_d12" to="main" method="_on_btn_add_d12_pressed"]
-[connection signal="pressed" from="VBoxAdd/btn_add_d20" to="main" method="_on_btn_add_d20_pressed"]
-[connection signal="pressed" from="VBoxRoll/btn_roll" to="main" method="_on_btn_roll_pressed"]
-[connection signal="pressed" from="VBoxRemove/btn_remove_d3" to="main" method="_on_btn_remove_d3_pressed"]
-[connection signal="pressed" from="VBoxRemove/btn_remove_d4" to="main" method="_on_btn_remove_d4_pressed"]
-[connection signal="pressed" from="VBoxRemove/btn_remove_d6" to="main" method="_on_btn_remove_d6_pressed"]
-[connection signal="pressed" from="VBoxRemove/btn_remove_d8" to="main" method="_on_btn_remove_d8_pressed"]
-[connection signal="pressed" from="VBoxRemove/btn_remove_d10" to="main" method="_on_btn_remove_d10_pressed"]
-[connection signal="pressed" from="VBoxRemove/btn_remove_d12" to="main" method="_on_btn_remove_d12_pressed"]
-[connection signal="pressed" from="VBoxRemove/btn_remove_d20" to="main" method="_on_btn_remove_d20_pressed"]
+[connection signal="pressed" from="Control/VBoxAdd/btn_add_d3" to="Control/main" method="_on_btn_add_d3_pressed"]
+[connection signal="pressed" from="Control/VBoxAdd/btn_add_d4" to="Control/main" method="_on_btn_add_d4_pressed"]
+[connection signal="pressed" from="Control/VBoxAdd/btn_add_d6" to="Control/main" method="_on_btn_add_d6_pressed"]
+[connection signal="pressed" from="Control/VBoxAdd/btn_add_d8" to="Control/main" method="_on_btn_add_d8_pressed"]
+[connection signal="pressed" from="Control/VBoxAdd/btn_add_d10" to="Control/main" method="_on_btn_add_d10_pressed"]
+[connection signal="pressed" from="Control/VBoxAdd/btn_add_d12" to="Control/main" method="_on_btn_add_d12_pressed"]
+[connection signal="pressed" from="Control/VBoxAdd/btn_add_d20" to="Control/main" method="_on_btn_add_d20_pressed"]
+[connection signal="pressed" from="Control/VBoxRoll/btn_roll" to="Control/main" method="_on_btn_roll_pressed"]
+[connection signal="pressed" from="Control/VBoxRemove/btn_remove_d3" to="Control/main" method="_on_btn_remove_d3_pressed"]
+[connection signal="pressed" from="Control/VBoxRemove/btn_remove_d4" to="Control/main" method="_on_btn_remove_d4_pressed"]
+[connection signal="pressed" from="Control/VBoxRemove/btn_remove_d6" to="Control/main" method="_on_btn_remove_d6_pressed"]
+[connection signal="pressed" from="Control/VBoxRemove/btn_remove_d8" to="Control/main" method="_on_btn_remove_d8_pressed"]
+[connection signal="pressed" from="Control/VBoxRemove/btn_remove_d10" to="Control/main" method="_on_btn_remove_d10_pressed"]
+[connection signal="pressed" from="Control/VBoxRemove/btn_remove_d12" to="Control/main" method="_on_btn_remove_d12_pressed"]
+[connection signal="pressed" from="Control/VBoxRemove/btn_remove_d20" to="Control/main" method="_on_btn_remove_d20_pressed"]

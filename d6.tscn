@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://d6.gd" type="Script" id=1]
-[ext_resource path="res://face.tscn" type="PackedScene" id=2]
+[ext_resource path="res://choma_blue.tres" type="Material" id=2]
 [ext_resource path="res://images/1.png" type="Texture" id=3]
 [ext_resource path="res://images/2.png" type="Texture" id=4]
 [ext_resource path="res://images/3.png" type="Texture" id=5]
@@ -10,44 +10,6 @@
 [ext_resource path="res://images/5.png" type="Texture" id=8]
 
 [sub_resource type="CubeMesh" id=1]
-
-[sub_resource type="VisualShaderNodeColorConstant" id=3]
-constant = Color( 1, 0, 0, 1 )
-
-[sub_resource type="VisualShader" id=4]
-code = "shader_type spatial;
-render_mode specular_schlick_ggx;
-
-
-
-
-void vertex() {
-// Output:0
-
-}
-
-void fragment() {
-// Color:2
-	vec3 n_out2p0 = vec3(1.000000, 0.000000, 0.000000);
-	float n_out2p1 = 1.000000;
-
-// Output:0
-	ALBEDO = n_out2p0;
-
-}
-
-void light() {
-// Output:0
-
-}
-"
-graph_offset = Vector2( 0, 89.1667 )
-nodes/fragment/2/node = SubResource( 3 )
-nodes/fragment/2/position = Vector2( 120, 200 )
-nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0 )
-
-[sub_resource type="ShaderMaterial" id=5]
-shader = SubResource( 4 )
 
 [sub_resource type="BoxShape" id=2]
 
@@ -59,45 +21,44 @@ script = ExtResource( 1 )
 transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0 )
 mesh = SubResource( 1 )
 skeleton = NodePath("")
-material/0 = SubResource( 5 )
+material/0 = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 visible = false
 shape = SubResource( 2 )
 
-[node name="face1" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0 )
+[node name="face1" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
 opacity = 0.0
+billboard = 1
 texture = ExtResource( 3 )
 
-[node name="face2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0, 0 )
+[node name="face2" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0 )
 opacity = 0.0
+billboard = 1
 texture = ExtResource( 4 )
 
-[node name="face3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.25 )
+[node name="face3" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5 )
 opacity = 0.0
+billboard = 1
 texture = ExtResource( 5 )
 
-[node name="face4" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.25 )
+[node name="face4" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5 )
 opacity = 0.0
+billboard = 1
 texture = ExtResource( 6 )
 
-[node name="face5" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0, 0 )
+[node name="face5" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0 )
 opacity = 0.0
+billboard = 1
 texture = ExtResource( 8 )
 
-[node name="face6" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.25, 0 )
+[node name="face6" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0 )
 opacity = 0.0
+billboard = 1
 texture = ExtResource( 7 )
-
-[editable path="face1"]
-[editable path="face2"]
-[editable path="face3"]
-[editable path="face4"]
-[editable path="face5"]
-[editable path="face6"]

@@ -20,8 +20,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Input.is_action_just_released("Roll"):
+		_on_btn_roll_pressed()
 
 
 func _on_btn_roll_pressed():
@@ -103,3 +104,5 @@ func _on_btn_add_d20_pressed():
 
 func _on_btn_remove_d20_pressed():
 	remove_dn("d20", d20_scene)
+
+

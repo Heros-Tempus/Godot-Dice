@@ -1,6 +1,6 @@
-extends Spatial
+extends Node3D
 
-onready var lbl = $"../../Label"
+@onready var lbl = $"../../Label"
 var d3_scene = load("res://d3.tscn")
 var d4_scene = load("res://d4.tscn")
 var d6_scene = load("res://d6.tscn")
@@ -20,18 +20,18 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_released("Roll"):
 		_on_btn_roll_pressed()
 
 
 func _on_btn_roll_pressed():
 	for n in $".".get_children():
-		var file = n.get_filename()
+		var file = n.get_scene_file_path()
 		if file in file_list:
 			n.queue_free()
 	for d in d_list:
-		var x = d.instance()
+		var x = d.instantiate()
 		x.transform.origin = Vector3(0,10,0)
 		add_child(x)
 
@@ -46,7 +46,7 @@ func remove_dn(d_name, d_scene):
 	var i = d_list.find(d_scene)
 	if i != -1:
 		d_count[d_name] -= 1
-		d_list.remove(i)
+		d_list.remove_at(i)
 		lbl.text = str(d_count)
 
 

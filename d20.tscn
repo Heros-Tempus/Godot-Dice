@@ -1,161 +1,161 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://models/D20.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://images/11.png" type="Texture" id=2]
-[ext_resource path="res://images/12.png" type="Texture" id=3]
-[ext_resource path="res://images/3.png" type="Texture" id=4]
-[ext_resource path="res://images/2.png" type="Texture" id=5]
-[ext_resource path="res://images/4.png" type="Texture" id=6]
-[ext_resource path="res://images/8.png" type="Texture" id=7]
-[ext_resource path="res://images/5.png" type="Texture" id=8]
-[ext_resource path="res://images/7.png" type="Texture" id=9]
-[ext_resource path="res://images/6.png" type="Texture" id=10]
-[ext_resource path="res://images/1.png" type="Texture" id=11]
+[ext_resource path="res://images/11.png" type="Texture2D" id=2]
+[ext_resource path="res://images/12.png" type="Texture2D" id=3]
+[ext_resource path="res://images/3.png" type="Texture2D" id=4]
+[ext_resource path="res://images/2.png" type="Texture2D" id=5]
+[ext_resource path="res://images/4.png" type="Texture2D" id=6]
+[ext_resource path="res://images/8.png" type="Texture2D" id=7]
+[ext_resource path="res://images/5.png" type="Texture2D" id=8]
+[ext_resource path="res://images/7.png" type="Texture2D" id=9]
+[ext_resource path="res://images/6.png" type="Texture2D" id=10]
+[ext_resource path="res://images/1.png" type="Texture2D" id=11]
 [ext_resource path="res://d20.gd" type="Script" id=12]
-[ext_resource path="res://images/20.png" type="Texture" id=13]
-[ext_resource path="res://images/16.png" type="Texture" id=14]
-[ext_resource path="res://images/13.png" type="Texture" id=15]
-[ext_resource path="res://images/14.png" type="Texture" id=16]
-[ext_resource path="res://images/15.png" type="Texture" id=17]
-[ext_resource path="res://images/19.png" type="Texture" id=18]
-[ext_resource path="res://images/17.png" type="Texture" id=19]
-[ext_resource path="res://images/18.png" type="Texture" id=20]
-[ext_resource path="res://images/9.png" type="Texture" id=21]
-[ext_resource path="res://images/10.png" type="Texture" id=22]
+[ext_resource path="res://images/20.png" type="Texture2D" id=13]
+[ext_resource path="res://images/16.png" type="Texture2D" id=14]
+[ext_resource path="res://images/13.png" type="Texture2D" id=15]
+[ext_resource path="res://images/14.png" type="Texture2D" id=16]
+[ext_resource path="res://images/15.png" type="Texture2D" id=17]
+[ext_resource path="res://images/19.png" type="Texture2D" id=18]
+[ext_resource path="res://images/17.png" type="Texture2D" id=19]
+[ext_resource path="res://images/18.png" type="Texture2D" id=20]
+[ext_resource path="res://images/9.png" type="Texture2D" id=21]
+[ext_resource path="res://images/10.png" type="Texture2D" id=22]
 [ext_resource path="res://choma_blue.tres" type="Material" id=23]
 
-[sub_resource type="ConvexPolygonShape" id=1]
-points = PoolVector3Array( 7.8749, -1.12701, 4.7725, -0.00150061, 2.38227, 9.2932, 0.0170031, -6.8063, 5.87823, 4.86497, -6.8063, -2.54096, 7.8749, 2.27247, -4.34888, 4.86497, 7.9532, 2.96458, -4.86951, 7.9532, 2.96458, -7.8779, -1.12701, 4.7725, -4.86951, -6.8063, -2.54096, -0.00150061, -1.23681, -8.8678, -0.00150061, 7.87663, -5.46706, -7.8779, 2.27247, -4.34888 )
+[sub_resource type="ConvexPolygonShape3D" id=1]
+points = PackedVector3Array( 7.8749, -1.12701, 4.7725, -0.00150061, 2.38227, 9.2932, 0.0170031, -6.8063, 5.87823, 4.86497, -6.8063, -2.54096, 7.8749, 2.27247, -4.34888, 4.86497, 7.9532, 2.96458, -4.86951, 7.9532, 2.96458, -7.8779, -1.12701, 4.7725, -4.86951, -6.8063, -2.54096, -0.00150061, -1.23681, -8.8678, -0.00150061, 7.87663, -5.46706, -7.8779, 2.27247, -4.34888 )
 
-[node name="d20" type="RigidBody"]
+[node name="d20" type="RigidBody3D"]
 gravity_scale = 2.0
 script = ExtResource( 12 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 23 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="face1" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25955, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25955, 0 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 11 )
 
 [node name="face2" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24828, 1.47839, -0.669567 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24828, 1.47839, -0.669567 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 5 )
 
 [node name="face3" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.617148, 0.853666, -1.75504 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.617148, 0.853666, -1.75504 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 4 )
 
 [node name="face4" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.695224, 0.786151, -1.85378 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.695224, 0.786151, -1.85378 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 6 )
 
 [node name="face5" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20134, 1.50105, -0.712742 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20134, 1.50105, -0.712742 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 8 )
 
 [node name="face6" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97008, 0.927966, 0.392177 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97008, 0.927966, 0.392177 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 10 )
 
 [node name="face7" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20085, 0.909474, 1.52505 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20085, 0.909474, 1.52505 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 9 )
 
 [node name="face8" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50825, 1.45075 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50825, 1.45075 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 7 )
 
 [node name="face9" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24052, 0.925564, 1.4469 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24052, 0.925564, 1.4469 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 21 )
 
 [node name="face10" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86936, 0.768637, 0.320396 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86936, 0.768637, 0.320396 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 22 )
 
 [node name="face11" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84721, -0.6293, -0.207132 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84721, -0.6293, -0.207132 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 2 )
 
 [node name="face12" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05888, -0.572268, -1.38742 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05888, -0.572268, -1.38742 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 3 )
 
 [node name="face13" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24433, -1.32103 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24433, -1.32103 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 15 )
 
 [node name="face14" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14885, -0.688256, -1.3857 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14885, -0.688256, -1.3857 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 16 )
 
 [node name="face15" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79731, -0.652595, -0.229915 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79731, -0.652595, -0.229915 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 17 )
 
 [node name="face16" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13082, -1.3264, 0.659199 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13082, -1.3264, 0.659199 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 14 )
 
 [node name="face17" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.675598, -0.498393, 1.76376 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.675598, -0.498393, 1.76376 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 19 )
 
 [node name="face18" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.665947, -0.574425, 1.85384 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.665947, -0.574425, 1.85384 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 20 )
 
 [node name="face19" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21158, -1.41716, 0.750867 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21158, -1.41716, 0.750867 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 18 )
 
 [node name="face20" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.96319, 0 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.96319, 0 )
 opacity = 0.0
 billboard = 1
 texture = ExtResource( 13 )

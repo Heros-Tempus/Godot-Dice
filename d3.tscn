@@ -1,42 +1,42 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://dp5rcmk3by4uw"]
 
-[ext_resource path="res://images/3.png" type="Texture" id=1]
-[ext_resource path="res://images/1.png" type="Texture" id=2]
-[ext_resource path="res://images/2.png" type="Texture" id=3]
-[ext_resource path="res://d3.gd" type="Script" id=4]
-[ext_resource path="res://models/D3.obj" type="ArrayMesh" id=5]
-[ext_resource path="res://choma_blue.tres" type="Material" id=6]
+[ext_resource type="Texture2D" uid="uid://bqkow3xn6txee" path="res://images/3.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cq8cqn5i2ugj3" path="res://images/1.png" id="2"]
+[ext_resource type="Material" uid="uid://di18g24gate7x" path="res://choma_blue.tres" id="2_uxdn0"]
+[ext_resource type="Texture2D" uid="uid://chbq0t6os58k8" path="res://images/2.png" id="3"]
+[ext_resource type="Script" path="res://d3.gd" id="4"]
+[ext_resource type="ArrayMesh" uid="uid://dlxf8mj2bb2g3" path="res://models/D3.obj" id="5"]
 
-[sub_resource type="ConvexPolygonShape" id=1]
-points = PoolVector3Array( 10.5816, 3.27859, 0.219337, -9.96307, -4.3301, -4.98164, -9.96307, -4.3301, 4.98164, -9.24918, 3.96629, -0.210049, 9.961, -4.3301, -4.98164, 9.961, -4.3301, 4.98164, -14.7105, -1.61053, -0.226158, 14.7094, -1.61116, -0.225154, 9.03601, 3.96629, 0.210049, -9.24918, 3.96629, 0.210049, 9.03601, 3.96629, -0.210049, -10.5803, 3.27845, 0.220277, 10.5816, 3.27859, -0.219337, -10.5803, 3.27845, -0.220277, 14.4019, -1.13465, 0.220448, -14.4005, -1.13461, 0.221392, 9.08287, -3.53761, -4.54245, 9.08287, -3.53761, 4.54245, -9.08468, -3.53761, 4.54245, -9.08468, -3.53761, -4.54245, 14.4019, -1.13465, -0.220448, -14.4005, -1.13461, -0.221392, -14.7105, -1.61053, 0.226158, 14.7094, -1.61116, 0.225154, 10.3568, -3.3323, 4.18604, 10.3568, -3.3323, -4.18604, -10.3561, -3.33314, -4.18702, -10.356, -3.33312, 4.187, 10.4021, -4.09798, -4.521, 10.4021, -4.09798, 4.521, -10.8164, -3.85876, -4.05635, -10.8164, -3.85874, 4.05633 )
+[sub_resource type="ConvexPolygonShape3D" id="1"]
+points = PackedVector3Array(10.5816, 3.27859, 0.219337, -9.96307, -4.3301, -4.98164, -9.96307, -4.3301, 4.98164, -9.24918, 3.96629, -0.210049, 9.961, -4.3301, -4.98164, 9.961, -4.3301, 4.98164, -14.7105, -1.61053, -0.226158, 14.7094, -1.61116, -0.225154, 9.03601, 3.96629, 0.210049, -9.24918, 3.96629, 0.210049, 9.03601, 3.96629, -0.210049, -10.5803, 3.27845, 0.220277, 10.5816, 3.27859, -0.219337, -10.5803, 3.27845, -0.220277, 14.4019, -1.13465, 0.220448, -14.4005, -1.13461, 0.221392, 9.08287, -3.53761, -4.54245, 9.08287, -3.53761, 4.54245, -9.08468, -3.53761, 4.54245, -9.08468, -3.53761, -4.54245, 14.4019, -1.13465, -0.220448, -14.4005, -1.13461, -0.221392, -14.7105, -1.61053, 0.226158, 14.7094, -1.61116, 0.225154, 10.3568, -3.3323, 4.18604, 10.3568, -3.3323, -4.18604, -10.3561, -3.33314, -4.18702, -10.356, -3.33312, 4.187, 10.4021, -4.09798, -4.521, 10.4021, -4.09798, 4.521, -10.8164, -3.85876, -4.05635, -10.8164, -3.85874, 4.05633)
 
-[node name="d3" type="RigidBody"]
-gravity_scale = 2.0
-script = ExtResource( 4 )
+[node name="d3" type="RigidBody3D"]
+gravity_scale = 8.0
+script = ExtResource("4")
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 6 )
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = ExtResource("2_uxdn0")
+mesh = ExtResource("5")
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
-shape = SubResource( 1 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("1")
 
 [node name="face1" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.751, 0 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.751, 0)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 2 )
+texture = ExtResource("2")
 
 [node name="face2" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.74841, -5.43727 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.74841, -5.43727)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 3 )
+texture = ExtResource("3")
 
 [node name="face3" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.748, 5.437 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.748, 5.437)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 1 )
+texture = ExtResource("1")

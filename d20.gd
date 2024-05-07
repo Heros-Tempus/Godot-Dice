@@ -1,4 +1,4 @@
-extends RigidBody
+extends RigidBody3D
 
 var count = 30
 var opacity = 0
@@ -7,9 +7,9 @@ var opacity = 0
 func _ready():
 	var spin_magnitude = 20
 	randomize()
-	var x = rand_range(-1 * spin_magnitude, spin_magnitude)
-	var y = rand_range(-1 * spin_magnitude, spin_magnitude)
-	var z = rand_range(-1 * spin_magnitude, spin_magnitude)
+	var x = randf_range(-1 * spin_magnitude, spin_magnitude)
+	var y = randf_range(-1 * spin_magnitude, spin_magnitude)
+	var z = randf_range(-1 * spin_magnitude, spin_magnitude)
 	set_angular_velocity(Vector3(x, y, z))
 
 

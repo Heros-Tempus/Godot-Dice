@@ -1,20 +1,22 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh"
+uid="uid://dlxf8mj2bb2g3"
+path="res://.godot/imported/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh"
 
 [deps]
 
-files=[ "res://.import/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh" ]
+files=["res://.godot/imported/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh"]
 
 source_file="res://models/D3.obj"
-dest_files=[ "res://.import/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh", "res://.import/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh" ]
+dest_files=["res://.godot/imported/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh", "res://.godot/imported/D3.obj-3b7bcda0b46568f4bd6ef351fca76636.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
-octahedral_compression=true
-optimize_mesh_flags=4286
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

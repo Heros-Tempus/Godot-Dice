@@ -1,8 +1,11 @@
 res://default_env.tres
-res://Control.tscn
+res://d6.tscn
 res://d3.gd
 res://sobel-edge-outline.gdshader
 res://choma_blue.tres
+res://d6.gd
+res://d4.gd
+res://Control.tscn
 res://main.tscn
 res://d3.tscn
 res://d4.tscn

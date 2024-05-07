@@ -1,64 +1,64 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=11 format=3 uid="uid://j8qmh3okjcam"]
 
-[ext_resource path="res://d6.gd" type="Script" id=1]
-[ext_resource path="res://choma_blue.tres" type="Material" id=2]
-[ext_resource path="res://images/1.png" type="Texture2D" id=3]
-[ext_resource path="res://images/2.png" type="Texture2D" id=4]
-[ext_resource path="res://images/3.png" type="Texture2D" id=5]
-[ext_resource path="res://images/4.png" type="Texture2D" id=6]
-[ext_resource path="res://images/6.png" type="Texture2D" id=7]
-[ext_resource path="res://images/5.png" type="Texture2D" id=8]
+[ext_resource type="Script" path="res://d6.gd" id="1"]
+[ext_resource type="Material" uid="uid://di18g24gate7x" path="res://choma_blue.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://cq8cqn5i2ugj3" path="res://images/1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://chbq0t6os58k8" path="res://images/2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bqkow3xn6txee" path="res://images/3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bx0r5f62qfgfl" path="res://images/4.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://tqh2oe1t8ykl" path="res://images/6.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dmsl0ku845qrh" path="res://images/5.png" id="8"]
 
-[sub_resource type="BoxMesh" id=1]
+[sub_resource type="BoxMesh" id="1"]
 
-[sub_resource type="BoxShape3D" id=2]
+[sub_resource type="BoxShape3D" id="2"]
 
 [node name="d6" type="RigidBody3D"]
-gravity_scale = 2.0
-script = ExtResource( 1 )
+gravity_scale = 3.0
+script = ExtResource("1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0 )
-mesh = SubResource( 1 )
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+material_override = ExtResource("2")
+mesh = SubResource("1")
 skeleton = NodePath("")
-material/0 = ExtResource( 2 )
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-visible = false
-shape = SubResource( 2 )
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("2")
 
 [node name="face1" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 3 )
+texture = ExtResource("3")
 
 [node name="face2" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 4 )
+texture = ExtResource("4")
 
 [node name="face3" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 5 )
+texture = ExtResource("5")
 
 [node name="face4" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 6 )
+texture = ExtResource("6")
 
 [node name="face5" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 8 )
+texture = ExtResource("8")
 
 [node name="face6" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 7 )
+texture = ExtResource("7")

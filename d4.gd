@@ -3,6 +3,7 @@ extends RigidBody3D
 var count = 30
 var m = Color(1,1,1,0)
 var animate = false
+var alpha_delta = 0.5
 @onready var face_up = $face1
 
 # Called when the node enters the scene tree for the first time.
@@ -32,7 +33,7 @@ func _process(_delta):
 				greatest_y = i
 		face_up = ylist[greatest_y]
 	if animate:
-		m.a += 0.5
+		m.a += alpha_delta
 		face_up.set_modulate(m)
 		face_up.set_scale(face_up.get_scale()*1.01)
 		count -= 1

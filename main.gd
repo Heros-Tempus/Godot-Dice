@@ -35,74 +35,56 @@ func _on_btn_roll_pressed():
 		x.transform.origin = Vector3(0,10,0)
 		add_child(x)
 
-
 func add_dn(d_name, d_scene):
 	d_list.append(d_scene)
 	d_count[d_name] += 1
-	lbl.text = str(d_count)
-
+	#lbl.text = str(d_count)
 
 func remove_dn(d_name, d_scene):
 	var i = d_list.find(d_scene)
 	if i != -1:
 		d_count[d_name] -= 1
 		d_list.remove_at(i)
-		lbl.text = str(d_count)
-
+		#lbl.text = str(d_count)
 
 func _on_btn_add_d3_pressed():
 	add_dn("d3", d3_scene)
 
-
 func _on_btn_remove_d3_pressed():
 	remove_dn("d3", d3_scene)
-
 
 func _on_btn_add_d4_pressed():
 	add_dn("d4", d4_scene)
 
-
 func _on_btn_remove_d4_pressed():
 	remove_dn("d4", d4_scene)
-
 
 func _on_btn_add_d6_pressed():
 	add_dn("d6", d6_scene)
 
-
 func _on_btn_remove_d6_pressed():
 	remove_dn("d6", d6_scene)
-
 
 func _on_btn_add_d8_pressed():
 	add_dn("d8", d8_scene)
 
-
 func _on_btn_remove_d8_pressed():
 	remove_dn("d8", d8_scene)
-
 
 func _on_btn_add_d10_pressed():
 	add_dn("d10", d10_scene)
 
-
 func _on_btn_remove_d10_pressed():
 	remove_dn("d10", d10_scene)
-
 
 func _on_btn_add_d12_pressed():
 	add_dn("d12", d12_scene)
 
-
 func _on_btn_remove_d12_pressed():
 	remove_dn("d12", d12_scene)
-
 
 func _on_btn_add_d20_pressed():
 	add_dn("d20", d20_scene)
 
-
 func _on_btn_remove_d20_pressed():
 	remove_dn("d20", d20_scene)
-
-

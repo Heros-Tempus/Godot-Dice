@@ -1,161 +1,163 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=25 format=3 uid="uid://cxcls3oej08c0"]
 
-[ext_resource path="res://models/D20.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://images/11.png" type="Texture2D" id=2]
-[ext_resource path="res://images/12.png" type="Texture2D" id=3]
-[ext_resource path="res://images/3.png" type="Texture2D" id=4]
-[ext_resource path="res://images/2.png" type="Texture2D" id=5]
-[ext_resource path="res://images/4.png" type="Texture2D" id=6]
-[ext_resource path="res://images/8.png" type="Texture2D" id=7]
-[ext_resource path="res://images/5.png" type="Texture2D" id=8]
-[ext_resource path="res://images/7.png" type="Texture2D" id=9]
-[ext_resource path="res://images/6.png" type="Texture2D" id=10]
-[ext_resource path="res://images/1.png" type="Texture2D" id=11]
-[ext_resource path="res://d20.gd" type="Script" id=12]
-[ext_resource path="res://images/20.png" type="Texture2D" id=13]
-[ext_resource path="res://images/16.png" type="Texture2D" id=14]
-[ext_resource path="res://images/13.png" type="Texture2D" id=15]
-[ext_resource path="res://images/14.png" type="Texture2D" id=16]
-[ext_resource path="res://images/15.png" type="Texture2D" id=17]
-[ext_resource path="res://images/19.png" type="Texture2D" id=18]
-[ext_resource path="res://images/17.png" type="Texture2D" id=19]
-[ext_resource path="res://images/18.png" type="Texture2D" id=20]
-[ext_resource path="res://images/9.png" type="Texture2D" id=21]
-[ext_resource path="res://images/10.png" type="Texture2D" id=22]
-[ext_resource path="res://choma_blue.tres" type="Material" id=23]
+[ext_resource type="ArrayMesh" uid="uid://ceg80viveme1h" path="res://models/D20.obj" id="1"]
+[ext_resource type="Texture2D" uid="uid://cxdok7swjtmf" path="res://images/11.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://mx4hprdrwfwu" path="res://images/12.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bqkow3xn6txee" path="res://images/3.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://chbq0t6os58k8" path="res://images/2.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bx0r5f62qfgfl" path="res://images/4.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dtrnbamd3teab" path="res://images/8.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dmsl0ku845qrh" path="res://images/5.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dj73i58jn422t" path="res://images/7.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://tqh2oe1t8ykl" path="res://images/6.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cq8cqn5i2ugj3" path="res://images/1.png" id="11"]
+[ext_resource type="Script" path="res://d20.gd" id="12"]
+[ext_resource type="Texture2D" uid="uid://d18vxbb0dwng2" path="res://images/20.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://ct6otit1tmpxh" path="res://images/16.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://crkk8g0rp7d6x" path="res://images/13.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://46k0gihq7drg" path="res://images/14.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://bnvvlq56o04ks" path="res://images/15.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://bxdx342qpiwks" path="res://images/19.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://crjnpe50ug0at" path="res://images/17.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://dxwjgyovqsia4" path="res://images/18.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://d8l7j2wqxiqj" path="res://images/9.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://yljmj4tnky4l" path="res://images/10.png" id="22"]
+[ext_resource type="Material" uid="uid://di18g24gate7x" path="res://choma_blue.tres" id="23"]
 
-[sub_resource type="ConvexPolygonShape3D" id=1]
-points = PackedVector3Array( 7.8749, -1.12701, 4.7725, -0.00150061, 2.38227, 9.2932, 0.0170031, -6.8063, 5.87823, 4.86497, -6.8063, -2.54096, 7.8749, 2.27247, -4.34888, 4.86497, 7.9532, 2.96458, -4.86951, 7.9532, 2.96458, -7.8779, -1.12701, 4.7725, -4.86951, -6.8063, -2.54096, -0.00150061, -1.23681, -8.8678, -0.00150061, 7.87663, -5.46706, -7.8779, 2.27247, -4.34888 )
+[sub_resource type="ConvexPolygonShape3D" id="1"]
+points = PackedVector3Array(7.8749, -1.12701, 4.7725, -0.00150061, 2.38227, 9.2932, 0.0170031, -6.8063, 5.87823, 4.86497, -6.8063, -2.54096, 7.8749, 2.27247, -4.34888, 4.86497, 7.9532, 2.96458, -4.86951, 7.9532, 2.96458, -7.8779, -1.12701, 4.7725, -4.86951, -6.8063, -2.54096, -0.00150061, -1.23681, -8.8678, -0.00150061, 7.87663, -5.46706, -7.8779, 2.27247, -4.34888)
 
 [node name="d20" type="RigidBody3D"]
-gravity_scale = 2.0
-script = ExtResource( 12 )
+mass = 10.0
+linear_damp = 0.05
+angular_damp = 0.05
+script = ExtResource("12")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 23 )
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+material_override = ExtResource("23")
+mesh = ExtResource("1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
-shape = SubResource( 1 )
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("1")
 
 [node name="face1" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25955, 0 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25955, 0)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 11 )
+texture = ExtResource("11")
 
 [node name="face2" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24828, 1.47839, -0.669567 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24828, 1.47839, -0.669567)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 5 )
+texture = ExtResource("5")
 
 [node name="face3" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.617148, 0.853666, -1.75504 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.617148, 0.853666, -1.75504)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 4 )
+texture = ExtResource("4")
 
 [node name="face4" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.695224, 0.786151, -1.85378 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.695224, 0.786151, -1.85378)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 6 )
+texture = ExtResource("6")
 
 [node name="face5" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20134, 1.50105, -0.712742 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20134, 1.50105, -0.712742)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 8 )
+texture = ExtResource("8")
 
 [node name="face6" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97008, 0.927966, 0.392177 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97008, 0.927966, 0.392177)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 10 )
+texture = ExtResource("10")
 
 [node name="face7" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20085, 0.909474, 1.52505 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20085, 0.909474, 1.52505)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 9 )
+texture = ExtResource("9")
 
 [node name="face8" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50825, 1.45075 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50825, 1.45075)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 7 )
+texture = ExtResource("7")
 
 [node name="face9" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24052, 0.925564, 1.4469 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24052, 0.925564, 1.4469)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 21 )
+texture = ExtResource("21")
 
 [node name="face10" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86936, 0.768637, 0.320396 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86936, 0.768637, 0.320396)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 22 )
+texture = ExtResource("22")
 
 [node name="face11" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84721, -0.6293, -0.207132 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84721, -0.6293, -0.207132)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 2 )
+texture = ExtResource("2")
 
 [node name="face12" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05888, -0.572268, -1.38742 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05888, -0.572268, -1.38742)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 3 )
+texture = ExtResource("3")
 
 [node name="face13" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24433, -1.32103 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24433, -1.32103)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 15 )
+texture = ExtResource("15")
 
 [node name="face14" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14885, -0.688256, -1.3857 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14885, -0.688256, -1.3857)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 16 )
+texture = ExtResource("16")
 
 [node name="face15" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79731, -0.652595, -0.229915 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79731, -0.652595, -0.229915)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 17 )
+texture = ExtResource("17")
 
 [node name="face16" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13082, -1.3264, 0.659199 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13082, -1.3264, 0.659199)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 14 )
+texture = ExtResource("14")
 
 [node name="face17" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.675598, -0.498393, 1.76376 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.675598, -0.498393, 1.76376)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 19 )
+texture = ExtResource("19")
 
 [node name="face18" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.665947, -0.574425, 1.85384 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.665947, -0.574425, 1.85384)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 20 )
+texture = ExtResource("20")
 
 [node name="face19" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21158, -1.41716, 0.750867 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21158, -1.41716, 0.750867)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 18 )
+texture = ExtResource("18")
 
 [node name="face20" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.96319, 0 )
-opacity = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.96319, 0)
+modulate = Color(1, 1, 1, 0)
 billboard = 1
-texture = ExtResource( 13 )
+texture = ExtResource("13")

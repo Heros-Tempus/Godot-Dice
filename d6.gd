@@ -8,7 +8,7 @@ var alpha_delta = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var spin_magnitude = 20
+	var spin_magnitude = 10
 	randomize()
 	var x = randf_range(-1 * spin_magnitude, spin_magnitude)
 	var y = randf_range(-1 * spin_magnitude, spin_magnitude)
@@ -40,7 +40,7 @@ func _process(_delta):
 	if animate:
 		m.a += alpha_delta
 		face_up.set_modulate(m)
-		face_up.set_scale(face_up.get_scale()*1.01)
+		face_up.global_translate(Vector3(0,0.25,0))
 		count -= 1
 		if count <= 0:
 			set_process(false)

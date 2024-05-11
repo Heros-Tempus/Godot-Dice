@@ -6,6 +6,8 @@ var animate = false
 var alpha_delta = 0.5
 @onready var face_up = $face1
 
+var stop_asap = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var spin_magnitude = 10
@@ -17,6 +19,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if stop_asap:
+		if position[1] < 3:
+			linear_damp += 0.1
+			angular_damp += 0.1
 	if (get_angular_velocity().is_zero_approx() or sleeping) and not animate:
 		animate = true
 		var face1 = $face1
